@@ -1,9 +1,9 @@
+import Pagecontent from "./componrnts/pagecontent";
+
 export default function Page() {
   return (
-    <div>
-      <div className="text-sm text-center dark:bg-red-600">
-        Hello Jellan Arta
-      </div>
-    </div>
+    <Pagecontent>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium molestias consequatur repudiandae blanditiis quaerat quia labore voluptatum facere fugiat maxime.
+    </Pagecontent>
   )
 }
