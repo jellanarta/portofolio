@@ -9,7 +9,7 @@ const dataoke = {
   description: 'Portofolio Jellan Arta seorang web programmer asal Lombok Nusa Tenggara Bara ( NTB )',
   keywords: 'jellan arta, jellan, arta, data jellan arta, profil jellan arta'
 }
-export const metada: Metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.URL_CLIENT}`),
   ...dataoke,
    alternates: {
