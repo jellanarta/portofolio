@@ -12,7 +12,7 @@ const dataoke = {
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.URL_CLIENT}`),
   ...dataoke,
-   alternates: {
+  alternates: {
     canonical: `${process.env.URL_CLIENT}`,
     languages: {
       'id-ID': '/id-ID',
@@ -23,6 +23,23 @@ export const metadata: Metadata = {
     follow: true,
     nocache: true
   },
+  themeColor: 'gray',
+  openGraph: {
+    title: dataoke.title,
+    description: dataoke.description,
+    images: '/profil.jpg',
+    url: `${process.env.URL_CLIENT}`,
+    type: 'article',
+    locale: 'id_ID',
+    authors: 'Jellan Arta'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: dataoke.title,
+    description: dataoke.description,
+    creator: 'Jellan Arta',
+    images: [`${process.env.URL_CLIENT}/profil.jpg`]
+  }
 }
 
 export default function RootLayout({
@@ -31,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body className={inter.className}>{children}</body>
     </html>
   )
