@@ -55,7 +55,7 @@ export default function Menu() {
                     </div>
                 </Link>
                 <div className="flex justify-center gap-5 items-center">
-                    <div className="flex justify-end gap-4">
+                    <div className="hidden md:flex justify-end gap-4">
                         <div>satu</div>
                         <div>satu</div>
                         <div>satu</div>
