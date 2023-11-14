@@ -49,8 +49,8 @@ export default function Menu() {
                         <div className="text-base uppercase font-semibold">
                             Jellan Arta
                         </div>
-                        <div className="text-xs lowercase">
-                            Portofolio Pribadi
+                        <div className="text-xs capitalize">
+                            web developer
                         </div>
                     </div>
                 </Link>
