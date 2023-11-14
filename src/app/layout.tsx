@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Roboto({
+  subsets: ['latin'],
+  weight: ['400']
+})
 
 const dataoke = {
   title: 'Portofolio Jellan Arta',
@@ -48,8 +50,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="id" className='dark'>
-      <body className={inter.className}>{children}</body>
+    <html lang="id" className='light'>
+      <body className={inter.className + ' bg-gray-100 dark:bg-gray-800'}>{children}</body>
     </html>
   )
 }
