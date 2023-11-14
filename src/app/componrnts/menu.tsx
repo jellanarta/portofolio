@@ -36,7 +36,7 @@ export default function Menu() {
     return (
         <div className=" bg-white dark:bg-gray-800 dark:shadow-md">
             <div className="max-w-5xl w-full mx-auto h-[80px] flex justify-between items-center px-5">
-                <Link href={'/'} className="flex items-center gap-5 text-gray-800 dark:text-gray-50">
+                <Link href={'/'} className="flex items-center gap-4 text-gray-800 dark:text-gray-50">
                     <div className="w-10 h-10">
                         <Image
                             src={'/logo.png'}
