@@ -17,9 +17,9 @@ export default function Menu() {
         const nilaidefault: any = localStorage.getItem('theme')
         if (nilaidefault) {
             if (nilaidefault === "light") {
-                memanipulasi({ kondisi: true, theme: 'light', ubahke: 'dark', element })
-            } else {
                 memanipulasi({ kondisi: false, theme: 'dark', ubahke: 'light', element })
+            } else {
+                memanipulasi({ kondisi: true, theme: 'light', ubahke: 'dark', element })
             }
         } else {
             memanipulasi({ kondisi: false, theme: 'dark', ubahke: 'light', element })
