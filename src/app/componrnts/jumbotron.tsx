@@ -35,7 +35,7 @@ function Profilarta() {
             </div>
             <div className="text-center text-sm">
                 Saya seorang web programmer dengan hasrat besar di bidang web developer.
-                Dengan latar belakang pendidikan di SMK Negeri 1 Praya ( Pariwisata ).
+                Latar belakang pendidikan di SMK Negeri 1 Praya ( Pariwisata ).
             </div>
         </div>
     )
