@@ -35,7 +35,7 @@ export default function Menu() {
     }
     return (
         <div className=" bg-white dark:bg-gray-800 dark:shadow-md">
-            <div className="max-w-5xl w-full mx-auto h-[80px] flex justify-between items-center px-5">
+            <div className="max-w-5xl w-full mx-auto h-[80px] lg:h-[90px] flex justify-between items-center px-5">
                 <Link href={'/'} className="flex items-center gap-4 text-gray-800 dark:text-gray-50">
                     <div className="w-10 h-10">
                         <Image
@@ -54,11 +54,13 @@ export default function Menu() {
                         </div>
                     </div>
                 </Link>
-                <div className="flex justify-center gap-5 items-center">
+                <div className="flex justify-center gap-6 items-center">
                     <div className="hidden md:flex justify-end gap-4">
-                        <div>satu</div>
-                        <div>satu</div>
-                        <div>satu</div>
+                        <ComponentsLink />
+                        <ComponentsLink />
+                        <ComponentsLink />
+                        <ComponentsLink />
+                        <ComponentsLink />
                     </div>
                     <div>
                         <div className={`bg-gray-300 w-[60px] relative h-7 px-[2px] cursor-pointer flex items-center rounded-full dark:bg-blue-500`} onClick={mengaktivkandarkmode}>
@@ -82,3 +84,10 @@ export default function Menu() {
     )
 }
 
+function ComponentsLink() {
+    return (
+        <div className="uppercase text-sm font-semibold">
+            kontak
+        </div>
+    )
+}
