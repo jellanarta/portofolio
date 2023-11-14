@@ -4,6 +4,14 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Menu() {
+
+    const [darkmode, setDarkmode] = useState(false)
+    function memanipulasi(data: { kondisi: boolean, theme: string, ubahke: string, element: any }) {
+        setDarkmode(data.kondisi)
+        localStorage.setItem('theme', data.ubahke)
+        data.element.classList.add(data.ubahke)
+        data.element.classList.remove(data.theme)
+    }
     useEffect(() => {
         const element = document.documentElement
         const nilaidefault: any = localStorage.getItem('theme')
@@ -17,14 +25,6 @@ export default function Menu() {
             memanipulasi({ kondisi: false, theme: 'dark', ubahke: 'light', element })
         }
     }, [])
-    const [darkmode, setDarkmode] = useState(false)
-    function memanipulasi(data: { kondisi: boolean, theme: string, ubahke: string, element: any }) {
-        setDarkmode(data.kondisi)
-        localStorage.setItem('theme', data.ubahke)
-        data.element.classList.add(data.ubahke)
-        data.element.classList.remove(data.theme)
-    }
-
     const mengaktivkandarkmode = () => {
         const element = document.documentElement
         if (darkmode) {
