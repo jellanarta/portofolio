@@ -1,27 +1,40 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Menu() {
+    useEffect(() => {
+        const element = document.documentElement
+        const nilaidefault: any = localStorage.getItem('theme')
+        if (nilaidefault) {
+            if (nilaidefault === "light") {
+                memanipulasi({ kondisi: true, theme: 'light', ubahke: 'dark', element })
+            } else {
+                memanipulasi({ kondisi: false, theme: 'dark', ubahke: 'light', element })
+            }
+        } else {
+            memanipulasi({ kondisi: false, theme: 'dark', ubahke: 'light', element })
+        }
+    }, [])
     const [darkmode, setDarkmode] = useState(false)
+    function memanipulasi(data: { kondisi: boolean, theme: string, ubahke: string, element: any }) {
+        setDarkmode(data.kondisi)
+        localStorage.setItem('theme', data.ubahke)
+        data.element.classList.add(data.ubahke)
+        data.element.classList.remove(data.theme)
+    }
+
     const mengaktivkandarkmode = () => {
         const element = document.documentElement
-        console.log(element)
         if (darkmode) {
-            setDarkmode(false)
-            localStorage.setItem('theme', 'light')
-            element.classList.add('light')
-            element.classList.remove('dark')
+            memanipulasi({ kondisi: false, theme: 'dark', ubahke: 'light', element })
         } else {
-            setDarkmode(true)
-            localStorage.setItem('theme', 'dark')
-            element.classList.add('dark')
-            element.classList.remove('light')
+            memanipulasi({ kondisi: true, theme: 'light', ubahke: 'dark', element })
         }
     }
     return (
-        <div className=" bg-white dark:bg-gray-800">
+        <div className=" bg-white dark:bg-gray-800 dark:shadow-md">
             <div className="max-w-5xl w-full mx-auto h-[80px] flex justify-between items-center px-5">
                 <Link href={'/'} className="flex items-center gap-5 text-gray-800 dark:text-gray-50">
                     <div className="w-10 h-10">
@@ -42,13 +55,18 @@ export default function Menu() {
                     </div>
                 </Link>
                 <div className="flex justify-center gap-5 items-center">
+                    <div className="flex justify-end gap-4">
+                        <div>satu</div>
+                        <div>satu</div>
+                        <div>satu</div>
+                    </div>
                     <div>
-                        <div className="bg-gray-300 w-[60px] relative h-7 px-[2px] cursor-pointer flex items-center rounded-full" onClick={mengaktivkandarkmode}>
+                        <div className={`bg-gray-300 w-[60px] relative h-7 px-[2px] cursor-pointer flex items-center rounded-full dark:bg-blue-500`} onClick={mengaktivkandarkmode}>
                             <div className={`w-6 h-6 rounded-full bg-white transition-all ${darkmode ? 'translate-x-[32px]' : '-translate-x-0'} absolute`}></div>
                         </div>
                     </div>
 
-                    <div className="ring-1 ring-gray-200 rounded-full w-11 h-11 flex  items-center justify-center">
+                    <div className="ring-1 ring-gray-200 rounded-full w-11 h-11 flex  items-center justify-center md:hidden">
                         <div className="w-6 h-6">
                             <Image
                                 src={`/menu.svg`}
@@ -63,3 +81,4 @@ export default function Menu() {
         </div>
     )
 }
+
