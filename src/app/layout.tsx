@@ -7,8 +7,8 @@ const inter = Roboto({
 })
 
 const dataoke = {
-  title: 'Portofolio Jellan Arta',
-  description: 'Portofolio Jellan Arta seorang web programmer asal Lombok Nusa Tenggara Bara ( NTB )',
+  title: 'Jellan Arta Web Developer',
+  description: 'Seorang web programmer dengan hasrat besar di bidang web developer. Latar belakang pendidikan di SMK Negeri 1 Praya ( Pariwisata ).',
   keywords: 'jellan arta, jellan, arta, data jellan arta, profil jellan arta'
 }
 export const metadata: Metadata = {

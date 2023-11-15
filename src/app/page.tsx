@@ -1,11 +1,12 @@
-import Jumbotron from "./componrnts/jumbotron";
-import Pagecontent from "./componrnts/pagecontent";
+import Jumbotron from "./components/jumbotron";
+import Pagecontent from "./components/pagecontent";
+import Pengalamankerja from "./components/pengalamankerja";
 
 export default function Page() {
   return (
     <Pagecontent>
       <Jumbotron />
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium molestias consequatur repudiandae blanditiis quaerat quia labore voluptatum facere fugiat maxime.
+      <Pengalamankerja />
     </Pagecontent>
   )
 }
