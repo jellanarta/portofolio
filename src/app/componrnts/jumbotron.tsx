@@ -41,8 +41,7 @@ function Profilarta() {
                 <Membuatsosmed ikon="facebook" username="jellanarta.id" />
                 <Membuatsosmed ikon="instagram" username="jellanarta" />
                 <Membuatsosmed ikon="github" username="jellanarta" />
-                <Membuatsosmed ikon="tiktok" username="jellanarta" />
-                <Membuatsosmed ikon="linked" username="jellanarta" />
+                <Membuatsosmed ikon="tiktok" username="@jellanarta" />
             </div>
         </div>
     )
