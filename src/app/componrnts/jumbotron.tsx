@@ -50,7 +50,7 @@ function Profilarta() {
 function Membuatsosmed({ ikon, username }: { ikon: string, username: string }) {
     return (
         <a href={`https://${ikon}.com/${username}`} target="_blank">
-            <div className="ring-1 ring-gray-200 rounded-full w-[40px] h-[40px] bg-white flex justify-center items-center hover:ring-blue-200">
+            <div className="ring-1 ring-gray-200 rounded-full w-[40px] h-[40px] bg-white flex justify-center items-center hover:ring-blue-400">
                 <div className="w-[20px] h-[20px]">
                     <Image
                         src={`/sosmed/${ikon}.svg`}
