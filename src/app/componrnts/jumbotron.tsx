@@ -37,6 +37,30 @@ function Profilarta() {
                 Seorang web programmer dengan hasrat besar di bidang web developer.
                 Latar belakang pendidikan di SMK Negeri 1 Praya ( Pariwisata ).
             </div>
+            <div className="flex justify-center gap-5">
+                <Membuatsosmed ikon="facebook" username="jellanarta.id" />
+                <Membuatsosmed ikon="instagram" username="jellanarta" />
+                <Membuatsosmed ikon="github" username="jellanarta" />
+                <Membuatsosmed ikon="tiktok" username="jellanarta" />
+                <Membuatsosmed ikon="linked" username="jellanarta" />
+            </div>
         </div>
+    )
+}
+
+function Membuatsosmed({ ikon, username }: { ikon: string, username: string }) {
+    return (
+        <a href={`https://${ikon}.com/${username}`} target="_blank">
+            <div className="ring-1 ring-gray-200 rounded-full w-[40px] h-[40px] bg-white flex justify-center items-center hover:ring-blue-200">
+                <div className="w-[20px] h-[20px]">
+                    <Image
+                        src={`/sosmed/${ikon}.svg`}
+                        width={100}
+                        height={100}
+                        alt="ikon sosmed"
+                    />
+                </div>
+            </div>
+        </a>
     )
 }

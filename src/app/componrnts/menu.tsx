@@ -20,15 +20,6 @@ export default function Menu() {
         const element = document.documentElement
         const nilaidefault: any = localStorage.getItem('theme')
         const kirim: Tipekirim = { kondisi: false, element, theme: 'dark', ubahke: 'light' }
-        // if (nilaidefault) {
-        //     if (nilaidefault === "light") {
-        //         memanipulasi({ kondisi: false, theme: 'dark', ubahke: 'light', element })
-        //     } else {
-        //         memanipulasi({ kondisi: true, theme: 'light', ubahke: 'dark', element })
-        //     }
-        // } else {
-        //     memanipulasi({ kondisi: false, theme: 'dark', ubahke: 'light', element })
-        // }
         if (nilaidefault && nilaidefault === "dark") {
             kirim.kondisi = true
             kirim.theme = 'light'
@@ -39,11 +30,6 @@ export default function Menu() {
     const mengaktivkandarkmode = () => {
         const element = document.documentElement
         const kirim: Tipekirim = { kondisi: false, element, theme: 'dark', ubahke: 'light' }
-        // if (darkmode) {
-        //     memanipulasi({ kondisi: false, theme: 'dark', ubahke: 'light', element })
-        // } else {
-        //     memanipulasi({ kondisi: true, theme: 'light', ubahke: 'dark', element })
-        // }
         if (!darkmode) {
             kirim.kondisi = true
             kirim.theme = 'light'
