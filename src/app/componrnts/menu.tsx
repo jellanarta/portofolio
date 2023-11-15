@@ -2,9 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
+interface Tipekirim {
+    kondisi: boolean,
+    theme: string,
+    ubahke: string,
+    element: any
+}
 export default function Menu() {
-
     const [darkmode, setDarkmode] = useState(false)
     function memanipulasi(data: { kondisi: boolean, theme: string, ubahke: string, element: any }) {
         setDarkmode(data.kondisi)
@@ -15,23 +19,37 @@ export default function Menu() {
     useEffect(() => {
         const element = document.documentElement
         const nilaidefault: any = localStorage.getItem('theme')
-        if (nilaidefault) {
-            if (nilaidefault === "light") {
-                memanipulasi({ kondisi: false, theme: 'dark', ubahke: 'light', element })
-            } else {
-                memanipulasi({ kondisi: true, theme: 'light', ubahke: 'dark', element })
-            }
-        } else {
-            memanipulasi({ kondisi: false, theme: 'dark', ubahke: 'light', element })
+        const kirim: Tipekirim = { kondisi: false, element, theme: 'dark', ubahke: 'light' }
+        // if (nilaidefault) {
+        //     if (nilaidefault === "light") {
+        //         memanipulasi({ kondisi: false, theme: 'dark', ubahke: 'light', element })
+        //     } else {
+        //         memanipulasi({ kondisi: true, theme: 'light', ubahke: 'dark', element })
+        //     }
+        // } else {
+        //     memanipulasi({ kondisi: false, theme: 'dark', ubahke: 'light', element })
+        // }
+        if (nilaidefault && nilaidefault === "dark") {
+            kirim.kondisi = true
+            kirim.theme = 'light'
+            kirim.ubahke = 'dark'
         }
+        memanipulasi(kirim)
     }, [])
     const mengaktivkandarkmode = () => {
         const element = document.documentElement
-        if (darkmode) {
-            memanipulasi({ kondisi: false, theme: 'dark', ubahke: 'light', element })
-        } else {
-            memanipulasi({ kondisi: true, theme: 'light', ubahke: 'dark', element })
+        const kirim: Tipekirim = { kondisi: false, element, theme: 'dark', ubahke: 'light' }
+        // if (darkmode) {
+        //     memanipulasi({ kondisi: false, theme: 'dark', ubahke: 'light', element })
+        // } else {
+        //     memanipulasi({ kondisi: true, theme: 'light', ubahke: 'dark', element })
+        // }
+        if (!darkmode) {
+            kirim.kondisi = true
+            kirim.theme = 'light'
+            kirim.ubahke = 'dark'
         }
+        memanipulasi(kirim)
     }
     return (
         <div className=" bg-white dark:bg-gray-800 dark:shadow-md">
