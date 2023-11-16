@@ -12,9 +12,9 @@ export default function Pengalamankerja() {
         </div>
       </div>
       <div className="grid grid-cols-1 gap-5 sm:flex sm:flex-wrap sm:justify-center mt-7 lg:grid lg:grid-cols-3">
-        <Kotakkotak bg="web" ikon="website" judul="pembuat website full stack" deskripsi="Membangun web responsif menggunakan teknologi Full stack seperti NodeJS, NextJS, ExpressJS, TailwindCSS dan MysQL" />
-        <Kotakkotak bg="seo" ikon="seo" judul="spesialis seo dan konten website" deskripsi="Mengoptimalkan seitus web untuk meningkatkan peringkat pencarian melalui strategi SEO yang terukur" />
-        <Kotakkotak bg="writing" ikon="writing" judul="penulis konten independen" deskripsi="Menulis artikel berkualitas tinggi tentang berbagai topik, termasuk teknologi, web development, dan tren industri terkini" />
+        <Kotakkotak bg="bg-[url('/web.jpg')]" ikon="website" judul="pembuat website full stack" deskripsi="Membangun web responsif menggunakan teknologi Full stack seperti NodeJS, NextJS, ExpressJS, TailwindCSS dan MysQL" />
+        <Kotakkotak bg="bg-[url('/seo.jpg')]" ikon="seo" judul="spesialis seo dan konten website" deskripsi="Mengoptimalkan seitus web untuk meningkatkan peringkat pencarian melalui strategi SEO yang terukur" />
+        <Kotakkotak bg="bg-[url('/writing.jpg')]" ikon="writing" judul="penulis konten independen" deskripsi="Menulis artikel berkualitas tinggi tentang berbagai topik, termasuk teknologi, web development, dan tren industri terkini" />
       </div>
     </div>
   )
@@ -22,7 +22,7 @@ export default function Pengalamankerja() {
 
 function Kotakkotak({ ikon, judul, deskripsi, bg }: { bg: string, ikon: string, judul: string, deskripsi: string }) {
   return (
-    <div className={`ring-1 ring-gray-200 h-[250px] rounded-sm bg-[url('/${bg}.jpg')] bg-no-repeat bg-center bg-cover dark:ring-gray-700 shadow-sm w-full sm:w-[calc(50%-10px)] lg:w-full relative`}>
+    <div className={`ring-1 ring-gray-200 h-[250px] rounded-sm ${bg} bg-no-repeat bg-center bg-cover dark:ring-gray-700 shadow-sm w-full sm:w-[calc(50%-10px)] lg:w-full relative`}>
       <div className="absolute w-full h-full p-5" style={{ background: 'rgba(0,0,0,0.8)' }}>
         <div className="grid grid-cols-[1fr] gap-3 items-center">
           <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center">
