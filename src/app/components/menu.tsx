@@ -38,7 +38,7 @@ export default function Menu() {
         memanipulasi(kirim)
     }
     return (
-        <div className=" bg-white dark:bg-gray-800 dark:shadow-md">
+        <div className=" bg-white dark:bg-gray-800 dark:shadow-md sticky top-0 z-[1000]">
             <div className="max-w-5xl w-full mx-auto h-[80px] lg:h-[90px] flex justify-between items-center px-5">
                 <Link href={'/'} className="flex items-center gap-4 text-gray-800 dark:text-gray-50">
                     <div className="w-10 h-10">
