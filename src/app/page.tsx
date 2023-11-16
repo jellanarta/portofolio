@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <Pagecontent>
       <Jumbotron />
-      <div className="grid grid-cols-1 gap-5 md:grid-cols-[300px,auto] p-5 max-w-5xl mx-auto mt-5">
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-[300px,auto] p-5 max-w-5xl mx-auto mt-5 md:gap-10">
         <Skillabout />
         <Pengalamankerja />
       </div>
