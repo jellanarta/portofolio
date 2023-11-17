@@ -2,21 +2,19 @@ import Image from "next/image"
 
 export default function Pengalamankerja() {
   return (
-    <div >
+    <div className="pb-5 border-b border-dotted border-gray-400 dark:border-gray-500">
       <div>
-        <div>
-          <div className="text-base font-semibold uppercase">
-            pengalaman kerja
-          </div>
-          <div className="text-xs">
-            Pengalaman kerja di berbagai bidang dari tahun 2020 - 2023
-          </div>
+        <div className="text-base font-semibold uppercase">
+          pengalaman kerja
         </div>
-        <div className="mt-5 grid grid-cols-1 gap-5">
-          <Cardpengalaman judul="pembuat website full stack" tahun="2021 - sekarang" deskripsi={['Membangun dan mengembangkan situs web responsive menggunakan teknologi full stack seperti HTML, JavaScript, Tailwind, ReactJS, NextJS, ExpressJS, MySQL dan MongoDB', 'Berfokus pada fungsionalitas dan desain yang meningkatkan pengalaman pengguna']} />
-          <Cardpengalaman judul="Spesialis SEO dan konten website" tahun="2022 - sekarang" deskripsi={['Mengoptimalkan situs web untuk meningkatkan peringkat pencarian melalui startegi SEO yang terukur', 'Menyusun dan mengimplementasikan startegi konten untuk meningkatkan visibilitas online']} />
-          <Cardpengalaman judul="Penulis konten independen" tahun="2022 - sekarang" deskripsi={['Menulis artikel berkualitas tinggi tentang berbagai topik, termasuk teknologim web devlopment, dan tren industri terkini', 'Mempromosikan konten melalui platform sosial dan mengembangkan audiens pembaca']} />
+        <div className="text-xs">
+          Pengalaman kerja di berbagai bidang dari tahun 2020 - 2023
         </div>
+      </div>
+      <div className="mt-5 grid grid-cols-1 gap-5">
+        <Cardpengalaman judul="pembuat website full stack" tahun="2021 - sekarang" deskripsi={['Membangun dan mengembangkan situs web responsive menggunakan teknologi full stack seperti HTML, JavaScript, Tailwind, ReactJS, NextJS, ExpressJS, MySQL dan MongoDB', 'Berfokus pada fungsionalitas dan desain yang meningkatkan pengalaman pengguna']} />
+        <Cardpengalaman judul="Spesialis SEO dan konten website" tahun="2022 - sekarang" deskripsi={['Mengoptimalkan situs web untuk meningkatkan peringkat pencarian melalui startegi SEO yang terukur', 'Menyusun dan mengimplementasikan startegi konten untuk meningkatkan visibilitas online']} />
+        <Cardpengalaman judul="Penulis konten independen" tahun="2022 - sekarang" deskripsi={['Menulis artikel berkualitas tinggi tentang berbagai topik, termasuk teknologim web devlopment, dan tren industri terkini', 'Mempromosikan konten melalui platform sosial dan mengembangkan audiens pembaca']} />
       </div>
     </div>
   )
