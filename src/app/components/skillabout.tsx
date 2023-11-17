@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Skillabout() {
     return (
-        <div >
+        <div>
             <div className="grid grid-cols-1">
                 <div className="text-base font-semibold uppercase">
                     <h1>
@@ -23,10 +23,21 @@ export default function Skillabout() {
                             alt='Profil Jellan Arta'
                         />
                     </div>
-                    <div className="mt-5">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem quod, nam aperiam debitis dicta, odit amet at aliquid numquam ratione soluta voluptate atque voluptatem culpa! Facilis iste exercitationem amet quod.
+                    <div className="mt-5 grid grid-cols-1 gap-5">
+                        <div>
+                            <div className="text-base uppercase font-semibold">
+                                Jellan arta
+                            </div>
+                            <div className="text-sm dark:text-gray-300 mt-2">
+                                Seorang pengembang Web Developer dari Lombok Nusa Tenggara Barat. Pendidikan terakhir di SMK Negeri 1 Praya Pariwisata. Dengan komitmen untuk terus mengembangkan keterampilan dalam dunia web developer.
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div>
+                s
+
             </div>
         </div>
     )
