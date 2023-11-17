@@ -31,7 +31,30 @@ export default function Detailprofil() {
                             Seorang pengembang Web Developer dari Lombok Nusa Tenggara Barat. Pendidikan terakhir di SMK Negeri 1 Praya Pariwisata. Dengan komitmen untuk terus mengembangkan keterampilan dalam dunia web developer.
                         </div>
                     </div>
+                    <div className="grid grid-cols-1 gap-3">
+                        <Lebihlengkap ikon="pendidikan" teks="SMK Negeri 1 Praya Pariwisata" />
+                        <Lebihlengkap ikon="email" teks="jellanarta@gmail.com" />
+                        <Lebihlengkap ikon="nohp" teks="+6285941304719" />
+                        <Lebihlengkap ikon="lokasi" teks="Desa Jago, Kecamatan Praya, Kabupaten Lombok Tengah, Nusa Tenggara Barat, Indonesia" />
+                    </div>
                 </div>
+            </div>
+        </div>
+    )
+}
+function Lebihlengkap({ ikon, teks }: { ikon: string, teks: string }) {
+    return (
+        <div className="grid grid-cols-[auto,1fr] gap-4 items-start">
+            <div className="w-4 h-4">
+                <Image
+                    src={`/${ikon}.svg`}
+                    width={100}
+                    height={100}
+                    alt={ikon}
+                />
+            </div>
+            <div className="text-sm text-gray-700 dark:text-gray-300">
+                {teks}
             </div>
         </div>
     )

@@ -1,13 +1,13 @@
 import Image from 'next/image'
 export default function Skilldankeahlian() {
     return (
-        <div className="pb-5 border-b border-gray-400 border-dotted dark:border-gray-500">
+        <div className="pb-5 border-b border-gray-400 border-dotted dark:border-gray-500 md:border-b-0">
             <div>
                 <div className="text-base font-semibold uppercase">
                     skill dan keahlian
                 </div>
                 <div className="text-xs dark:text-gray-300">
-                    Skill dan keahlian di berbagai bidang
+                    Skill dan keahlian di web developer
                 </div>
             </div>
             <div className="grid grid-cols-1 gap-2 mt-5">
@@ -37,7 +37,7 @@ function Skilsatu({ judul }: { judul: string }) {
                     alt="verifikasi"
                 />
             </div>
-            <div className="text-sm uppercase">
+            <div className="text-sm uppercase text-gray-700 dark:text-gray-300">
                 {judul}
             </div>
         </div>
