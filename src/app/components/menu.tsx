@@ -60,11 +60,11 @@ export default function Menu() {
                 </Link>
                 <div className="flex justify-center gap-6 items-center">
                     <div className="hidden md:flex justify-end gap-4">
-                        <ComponentsLink />
-                        <ComponentsLink />
-                        <ComponentsLink />
-                        <ComponentsLink />
-                        <ComponentsLink />
+                        <ComponentsLink teks="layanan" />
+                        <ComponentsLink teks="profil & kontak" />
+                        <ComponentsLink teks="skill" />
+                        <ComponentsLink teks="pengalaman" />
+                        <ComponentsLink teks="lokasi" />
                     </div>
                     <div>
                         <div className={`bg-gray-300 w-[60px] relative h-7 px-[2px] cursor-pointer flex items-center rounded-full dark:bg-blue-500`} onClick={mengaktivkandarkmode}>
@@ -88,10 +88,10 @@ export default function Menu() {
     )
 }
 
-function ComponentsLink() {
+function ComponentsLink({ teks }: { teks: string }) {
     return (
-        <div className="uppercase text-sm font-semibold">
-            kontak
+        <div className="uppercase text-xs lg:text-sm font-semibold">
+            {teks}
         </div>
     )
 }

@@ -35,6 +35,10 @@ export default function Detailprofil() {
                         <Lebihlengkap ikon="pendidikan" teks="SMK Negeri 1 Praya Pariwisata" />
                         <Lebihlengkap ikon="email" teks="jellanarta@gmail.com" />
                         <Lebihlengkap ikon="nohp" teks="+6285941304719" />
+                        <Lebihlengkap ikon="website" teks="jellan.vercel.app" />
+                        <Lebihlengkap ikon="website" teks="kecimol.com" />
+                        <Lebihlengkap ikon="website" teks="nuansamandalika.com" />
+                        <Lebihlengkap ikon="github" teks="jellanarta" />
                         <Lebihlengkap ikon="lokasi" teks="Desa Jago, Kecamatan Praya, Kabupaten Lombok Tengah, Nusa Tenggara Barat, Indonesia" />
                     </div>
                 </div>
@@ -53,9 +57,18 @@ function Lebihlengkap({ ikon, teks }: { ikon: string, teks: string }) {
                     alt={ikon}
                 />
             </div>
-            <div className="text-sm text-gray-700 dark:text-gray-300">
-                {teks}
-            </div>
+            {
+                ikon === "website" || ikon === "github" ?
+                    <a href={`https://${ikon === "github" ? `github.com/${teks}` : `${teks}`}`} target="_blank">
+                        <div className="text-sm text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-500">
+                            {teks}
+                        </div>
+                    </a>
+                    :
+                    <div className="text-sm text-gray-700 dark:text-gray-300">
+                        {teks}
+                    </div>
+            }
         </div>
     )
 }

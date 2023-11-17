@@ -1,4 +1,5 @@
 import Detailprofil from "./components/detailprofil";
+import Footer from "./components/footer";
 import Jumbotron from "./components/jumbotron";
 import Layanan from "./components/layanan";
 import Lokasimaps from "./components/lokasimaps";
@@ -25,6 +26,7 @@ export default function Page() {
           </div>
         </div>
       </div>
+      <Footer />
     </Pagecontent>
   )
 }
