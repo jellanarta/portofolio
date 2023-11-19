@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Detailprofil() {
     return (
-        <div className="grid grid-cols-1 pb-5 border-b border-dotted border-gray-400 dark:border-gray-500">
+        <div className="grid grid-cols-1 pb-5 border-b border-dotted border-gray-400 dark:border-gray-500" id="profil">
             <div className="text-base font-semibold uppercase">
                 <h1>
                     profil pribadi

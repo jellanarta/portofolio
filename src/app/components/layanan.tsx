@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Layanan() {
     return (
-        <div className="p-5 max-w-5xl mx-auto mt-10">
+        <div className="p-5 max-w-5xl mx-auto mt-10" id="layanan">
             <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
                 <Kotakkotak ikon="layanancoding" judul="pembuatan website" deskripsi="Melayani pembuatan website full stack NodeJS menggunakan framework seperti ReactJS, NextJS sebagai Front-End dan ExpressJS sebagai Back-End. Serta MongoDB dan MYSQL sebagai database" />
                 <Kotakkotak ikon="layanantulisartikel" judul="penulis artikel" deskripsi="Melayani pembuatan artikel dengan berbagai topik seperti, teknologi terkini, berita terbaru, pariwisata dan berita olah raga seperti sepak bola dan moto GP" />

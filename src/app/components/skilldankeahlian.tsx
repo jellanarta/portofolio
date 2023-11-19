@@ -1,7 +1,7 @@
 import Image from 'next/image'
 export default function Skilldankeahlian() {
     return (
-        <div className="pb-5 border-b border-gray-400 border-dotted dark:border-gray-500 md:border-b-0">
+        <div className="pb-5 border-b border-gray-400 border-dotted dark:border-gray-500 md:border-b-0" id='skill'>
             <div>
                 <div className="text-base font-semibold uppercase">
                     skill dan keahlian

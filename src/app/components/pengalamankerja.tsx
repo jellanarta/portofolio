@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Pengalamankerja() {
   return (
-    <div className="pb-5 border-b border-dotted border-gray-400 dark:border-gray-500">
+    <div className="pb-5 border-b border-dotted border-gray-400 dark:border-gray-500" id="pengalaman">
       <div>
         <div className="text-base font-semibold uppercase">
           pengalaman kerja
