@@ -39,7 +39,7 @@ export default function Detailprofil() {
                         <Lebihlengkap ikon="website" teks="kecimol.com" />
                         <Lebihlengkap ikon="website" teks="nuansamandalika.com" />
                         <Lebihlengkap ikon="github" teks="jellanarta" />
-                        <Lebihlengkap ikon="lokasi" teks="Desa Jago, Kecamatan Praya, Kabupaten Lombok Tengah, Nusa Tenggara Barat, Indonesia" />
+                        <Lebihlengkap ikon="lokasi" teks="Praya, Kabupaten Lombok Tengah, Nusa Tenggara Barat, Indonesia" />
                     </div>
                 </div>
             </div>
