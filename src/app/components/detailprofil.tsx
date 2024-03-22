@@ -35,7 +35,7 @@ export default function Detailprofil() {
                         <Lebihlengkap ikon="pendidikan" teks="SMK Negeri 1 Praya Pariwisata" />
                         <Lebihlengkap ikon="email" teks="jellanarta@gmail.com" />
                         <Lebihlengkap ikon="nohp" teks="+6285941304719" />
-                        <Lebihlengkap ikon="website" teks="jellan.vercel.app" />
+                        <Lebihlengkap ikon="website" teks="arta.eu.org" />
                         <Lebihlengkap ikon="website" teks="kecimol.com" />
                         <Lebihlengkap ikon="website" teks="nuansamandalika.com" />
                         <Lebihlengkap ikon="github" teks="jellanarta" />
