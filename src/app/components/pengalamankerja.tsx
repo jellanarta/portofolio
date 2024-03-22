@@ -8,7 +8,7 @@ export default function Pengalamankerja() {
           pengalaman kerja
         </div>
         <div className="text-xs">
-          Pengalaman kerja di berbagai bidang dari tahun 2020 - 2023
+          Pengalaman kerja di berbagai bidang dari tahun 2020 - sekarang
         </div>
       </div>
       <div className="mt-5 grid grid-cols-1 gap-5">
