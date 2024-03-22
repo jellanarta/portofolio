@@ -14,7 +14,7 @@ export default function Pengalamankerja() {
       <div className="mt-5 grid grid-cols-1 gap-5">
         <Cardpengalaman judul="pembuat website full stack" tahun="2021 - sekarang" deskripsi={['Membangun dan mengembangkan situs web responsive menggunakan teknologi full stack seperti HTML, JavaScript, TailwindCSS, ReactJS, NextJS, ExpressJS, MySQL dan MongoDB', 'Berfokus pada fungsionalitas dan desain yang meningkatkan pengalaman pengguna']} />
         <Cardpengalaman judul="Spesialis SEO dan konten website" tahun="2022 - sekarang" deskripsi={['Mengoptimalkan situs web untuk meningkatkan peringkat pencarian melalui startegi SEO yang terukur', 'Menyusun dan mengimplementasikan startegi konten untuk meningkatkan visibilitas online']} />
-        <Cardpengalaman judul="Penulis konten independen" tahun="2022 - sekarang" deskripsi={['Menulis artikel berkualitas tinggi tentang berbagai topik, termasuk teknologim web devlopment, dan tren industri terkini', 'Mempromosikan konten melalui platform sosial dan mengembangkan audiens pembaca']} />
+        <Cardpengalaman judul="Penulis konten independen" tahun="2022 - sekarang" deskripsi={['Menulis artikel berkualitas tinggi tentang berbagai topik, termasuk teknologi web devlopment, dan tren industri terkini', 'Mempromosikan konten melalui platform sosial dan mengembangkan audiens pembaca']} />
       </div>
     </div>
   )
