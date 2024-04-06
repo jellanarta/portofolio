@@ -23,7 +23,7 @@ export default function Profiluser() {
             </div>
             <div className="text-center text-sm text-gray-100">
                 <h2>
-                    Seorang web programmer dengan hasrat besar di bidang web developer. Latar belakang pendidikan di SMK Negeri 1 Praya ( Pariwisata ).
+                    A web programmer with a strong passion for web development. Educational background from SMK Negeri 1 Praya (Pariwisata).
                 </h2>
             </div>
             <div className="flex justify-center gap-5">
