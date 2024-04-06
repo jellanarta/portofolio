@@ -67,11 +67,11 @@ export default function Menu() {
                     </Link>
                     <div className="flex justify-center gap-6 items-center">
                         <div className="hidden md:flex justify-end gap-4">
-                            <ComponentsLink id="layanan" teks="layanan" />
-                            <ComponentsLink id="profil" teks="profil & kontak" />
-                            <ComponentsLink id="skill" teks="skill" />
-                            <ComponentsLink id="pengalaman" teks="pengalaman" />
-                            <ComponentsLink id="maps" teks="lokasi" />
+                            <ComponentsLink id="layanan" teks="SERVICES" />
+                            <ComponentsLink id="profil" teks="PROFILE & CONTACT" />
+                            <ComponentsLink id="skill" teks="SKILLS" />
+                            <ComponentsLink id="pengalaman" teks="EXPERIENCE" />
+                            <ComponentsLink id="maps" teks="LOCATION" />
                         </div>
                         <div>
                             <div className={`bg-gray-300 w-[60px] relative h-7 px-[2px] cursor-pointer flex items-center rounded-full dark:bg-blue-500`} onClick={mengaktivkandarkmode}>
@@ -92,11 +92,7 @@ export default function Menu() {
                     </div>
                 </div>
             </div>
-            {
-                openmenu ?
-                    <Menumobile memanipulasimenu={memanipulasimenu} />
-                    : null
-            }
+            
         </>
     )
 }
