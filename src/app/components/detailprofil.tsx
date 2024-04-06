@@ -5,11 +5,11 @@ export default function Detailprofil() {
         <div className="grid grid-cols-1 pb-5 border-b border-dotted border-gray-400 dark:border-gray-500" id="profil">
             <div className="text-base font-semibold uppercase">
                 <h1>
-                    profil pribadi
+                    PERSONAL PROFILE
                 </h1>
             </div>
             <div className="text-xs">
-                Detail profil jellan arta
+                Detail profile of Jellan Arta.
             </div>
             <div className="mt-5">
                 <div className="w-full max-w-[500px] h-[300px] rounded-md relative">
@@ -28,7 +28,7 @@ export default function Detailprofil() {
                             Jellan arta
                         </div>
                         <div className="text-sm dark:text-gray-300 mt-2">
-                            Seorang pengembang Web Developer dari Lombok Nusa Tenggara Barat. Pendidikan terakhir di SMK Negeri 1 Praya Pariwisata. Dengan komitmen untuk terus mengembangkan keterampilan dalam dunia web developer.
+                            A Web Developer from Lombok, West Nusa Tenggara. Last education obtained from SMK Negeri 1 Praya Pariwisata. Committed to continuously improving skills in the field of web development.
                         </div>
                     </div>
                     <div className="grid grid-cols-1 gap-3">
