@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${process.env.URL_CLIENT}`,
     languages: {
-      'id-ID': '/id-ID',
+      'en-US': '/en-US',
     },
   },
   robots: {
