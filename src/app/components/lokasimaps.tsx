@@ -3,10 +3,10 @@ export default function Lokasimaps() {
         <div className="pb-5" id="maps">
             <div>
                 <div className="text-base font-semibold uppercase">
-                    lokasi di google maps
+                    LOCATION ON GOOGLE MAPS
                 </div>
                 <div className="text-xs">
-                    Alamat dan lokasi saya di google maps
+                    My address and location on Google Maps.
                 </div>
             </div>
             <div className="mt-5">
