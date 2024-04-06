@@ -4,10 +4,10 @@ export default function Skilldankeahlian() {
         <div className="pb-5 border-b border-gray-400 border-dotted dark:border-gray-500 md:border-b-0" id='skill'>
             <div>
                 <div className="text-base font-semibold uppercase">
-                    skill dan keahlian
+                    SKILLS AND EXPERTISE
                 </div>
                 <div className="text-xs dark:text-gray-300">
-                    Skill dan keahlian di web developer
+                    Skills and expertise in web development.
                 </div>
             </div>
             <div className="grid grid-cols-1 gap-2 mt-5">
