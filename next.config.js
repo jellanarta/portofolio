@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     env:{
-        URL_CLIENT: 'https://jellan.vercel.app',
+        URL_CLIENT: 'https://www.arta.eu.org',
     }
 }
 
