@@ -4,9 +4,9 @@ export default function Layanan() {
     return (
         <div className="p-5 max-w-5xl mx-auto mt-10" id="layanan">
             <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-                <Kotakkotak ikon="layanancoding" judul="pembuatan website" deskripsi="Melayani pembuatan website full stack NodeJS menggunakan framework seperti ReactJS, NextJS sebagai Front-End dan ExpressJS sebagai Back-End. Serta MongoDB dan MYSQL sebagai database" />
-                <Kotakkotak ikon="layanantulisartikel" judul="penulis artikel" deskripsi="Melayani pembuatan artikel dengan berbagai topik seperti, teknologi terkini, berita terbaru, pariwisata dan berita olah raga" />
-                <Kotakkotak ikon="layananseo" judul="seo website" deskripsi="Melayani pengoptimalan SEO sebuah website agar mampu bersaing di hasil pencarian google. Dengan Layanan ini website anda bisa bersaing dengan website lainnya di halaman pertama google" />
+                <Kotakkotak ikon="layanancoding" judul="WEBSITE DEVELOPMENT" deskripsi="We provide full stack NodeJS website development using frameworks like ReactJS, NextJS for Front-End, and ExpressJS for Back-End. We also utilize MongoDB and MySQL as databases." />
+                <Kotakkotak ikon="layanantulisartikel" judul="ARTICLE WRITING" deskripsi="We provide article writing services on various topics including the latest technology trends, current news, tourism, and sports news." />
+                <Kotakkotak ikon="layananseo" judul="WEBSITE SEO" deskripsi="We offer website SEO optimization services to help your website compete in Google search results. With this service, your website can compete with others on the first page of Google." />
             </div>
         </div>
     )
