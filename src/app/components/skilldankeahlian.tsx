@@ -1,3 +1,4 @@
+import { skils } from '@/lib/skils'
 import Image from 'next/image'
 export default function Skilldankeahlian() {
     return (
@@ -10,17 +11,12 @@ export default function Skilldankeahlian() {
                     Skills and expertise in web development.
                 </div>
             </div>
-            <div className="grid grid-cols-1 gap-2 mt-5">
-                <Skilsatu judul="javascript" />
-                <Skilsatu judul="typescript" />
-                <Skilsatu judul="tailwindcss" />
-                <Skilsatu judul="reactjs" />
-                <Skilsatu judul="nextjs" />
-                <Skilsatu judul="expressjs" />
-                <Skilsatu judul="nodejs" />
-                <Skilsatu judul="mysql" />
-                <Skilsatu judul="mongodb" />
-                <Skilsatu judul="git" />
+            <div className="grid grid-cols-2 md:grid-cols-1 gap-2 mt-5">
+                {
+                    skils.map((data:string,index:number)=>(
+                        <Skilsatu judul={data} key={index} />
+                    ))
+                }
             </div>
         </div>
     )
@@ -28,7 +24,7 @@ export default function Skilldankeahlian() {
 
 function Skilsatu({ judul }: { judul: string }) {
     return (
-        <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
+        <div className="grid grid-cols-[auto,1fr] gap-2 items-start">
             <div className="w-4 h-4">
                 <Image
                     src='/verifikasi.svg'
@@ -37,7 +33,7 @@ function Skilsatu({ judul }: { judul: string }) {
                     alt="verifikasi"
                 />
             </div>
-            <div className="text-sm uppercase text-gray-700 dark:text-gray-300">
+            <div className="text-xs uppercase text-gray-700 dark:text-gray-300">
                 {judul}
             </div>
         </div>

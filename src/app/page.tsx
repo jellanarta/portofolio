@@ -15,13 +15,18 @@ export default function Page() {
       <div className="grid grid-cols-1 gap-8 md:grid-cols-[300px,auto] p-5 max-w-5xl mx-auto mt-5 md:gap-10">
         <div>
           <div className="grid grid-cols-1 gap-10">
+            <div className="block md:hidden">
+          <Pengalamankerja />
+            </div>
             <Detailprofil />
             <Skilldankeahlian />
           </div>
         </div>
         <div>
           <div className="grid grid-cols-1 gap-10">
+            <div className="hidden md:block">
             <Pengalamankerja />
+            </div>
             <Lokasimaps />
           </div>
         </div>

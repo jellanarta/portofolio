@@ -8,9 +8,6 @@ export default function Detailprofil() {
                     PERSONAL PROFILE
                 </h1>
             </div>
-            <div className="text-xs">
-                Detail profile of Jellan Arta.
-            </div>
             <div className="mt-5">
                 <div className="w-full max-w-[500px] h-[300px] rounded-md relative">
                     <Image
