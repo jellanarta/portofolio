@@ -2,7 +2,7 @@ import { skils } from '@/lib/skils'
 import Image from 'next/image'
 export default function Skilldankeahlian() {
     return (
-        <div className="pb-5 border-b border-gray-400 border-dotted dark:border-gray-500 md:border-b-0" id='skill'>
+        <div className="pb-5 bg-white dark:bg-gray-700 p-5 " id='skill'>
             <div>
                 <div className="text-base font-semibold uppercase">
                     SKILLS AND EXPERTISE

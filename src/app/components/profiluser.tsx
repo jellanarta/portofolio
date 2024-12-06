@@ -27,9 +27,10 @@ export default function Profiluser() {
                 </h2>
             </div>
             <div className="flex justify-center gap-5">
-                <Membuatsosmed ikon="facebook" username="jellanarta.id" />
-                <Membuatsosmed ikon="instagram" username="jellanarta" />
                 <Membuatsosmed ikon="github" username="jellanarta" />
+                <Membuatsosmed ikon="linkedin" username="in/jellanarta" />
+                <Membuatsosmed ikon="instagram" username="jellanarta" />
+                <Membuatsosmed ikon="facebook" username="jellanarta.id" />
                 <Membuatsosmed ikon="tiktok" username="@jellanarta" />
             </div>
         </div>

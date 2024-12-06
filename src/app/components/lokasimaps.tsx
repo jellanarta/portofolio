@@ -1,6 +1,6 @@
 export default function Lokasimaps() {
     return (
-        <div className="pb-5" id="maps">
+        <div className="pb-5 bg-white p-5 dark:bg-gray-700" id="maps">
             <div>
                 <div className="text-base font-semibold uppercase">
                     LOCATION ON GOOGLE MAPS

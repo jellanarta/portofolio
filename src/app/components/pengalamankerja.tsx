@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Pengalamankerja() {
   return (
-    <div className="pb-5" id="pengalaman">
+    <div className="pb-5 bg-white p-5 dark:bg-gray-700" id="pengalaman">
       <div>
         <div className="text-base font-semibold uppercase">WORK EXPERIENCE</div>
       </div>
@@ -25,11 +25,11 @@ function Cardpengalaman({ data }: { data: WorkExperience }) {
         </div>
         <div className="h border-l border-blue-600 ml-[5px]" />
       </div>
-      <div className="border-b border-gray-400 border-dotted pb-5">
-        <div className="text-sm uppercase font-semibold mb-2">
+      <div className=" pb-5">
+        <div className="text-sm border-t mt-1 pt-5 border-blue-500  uppercase font-semibold mb-2">
           {data.profession}
         </div>
-        <div className="grid grid-cols-1 gap-1 border-b border-gray-400 pb-3">
+        <div className="grid grid-cols-1 gap-1 border-b  border-blue-500 pb-3">
           <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
             <div className="w-3 h-3">
               <Image

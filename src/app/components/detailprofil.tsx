@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Detailprofil() {
     return (
-        <div className="grid grid-cols-1 pb-5 border-b border-dotted border-gray-400 dark:border-gray-500" id="profil">
+        <div className="grid grid-cols-1 pb-5 bg-white dark:bg-gray-700 p-5 " id="profil">
             <div className="text-base font-semibold uppercase">
                 <h1>
                     PERSONAL PROFILE
@@ -45,7 +45,7 @@ export default function Detailprofil() {
 }
 function Lebihlengkap({ ikon, teks }: { ikon: string, teks: string }) {
     return (
-        <div className="grid grid-cols-[auto,1fr] gap-4 items-start">
+        <div className="grid grid-cols-[auto,1fr] border-b border-dotted border-gray-200 pb-1 gap-4 items-start">
             <div className="w-4 h-4">
                 <Image
                     src={`/${ikon}.svg`}
