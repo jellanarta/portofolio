@@ -25,9 +25,7 @@ export const pengalamankerja: WorkExperience[] = [
       "Implementing best security practices to protect sensitive financial data, including encryption and user authentication.",
       "Handling technical issues and debugging applications, providing quick solutions to ensure the continuity of financial services.",
       "Collaborating with the finance team and other developers to understand business needs and adjust applications based on user feedback.",
-      "Managing the deployment process of applications to servers and providing ongoing support and maintenance to ensure financial applications function properly.",
-      "Leading the development of modern, responsive websites. I led the development of responsive, user-friendly websites, focusing on both backend and frontend technologies.",
-      "Taking ownership as the PIC for website development projects. As the Person in Charge (PIC), I oversaw the planning, design, and implementation of web projects, ensuring timely delivery within scope and budget.",
+      "Managing the deployment process of applications to servers and providing ongoing support and maintenance to ensure financial applications function properly."
     ],
     skils: [
       "C#",
