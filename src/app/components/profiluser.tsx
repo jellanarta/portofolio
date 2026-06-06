@@ -48,6 +48,27 @@ export default function Profiluser() {
                 <Membuatsosmed ikon="facebook" username="jellanarta.id" tooltip="Facebook" />
                 <Membuatsosmed ikon="tiktok" username="@jellanarta" tooltip="TikTok" />
             </div>
+
+            {/* Download CV Button */}
+            <div className="mt-4">
+                <a
+                    href="https://drive.google.com/file/d/1tlGe1cp9JBUNh2BLhefm_qb4s06PSUPq/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-bold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 hover:scale-105 active:scale-95 transition-all duration-300 shadow-lg shadow-indigo-500/25 border border-white/10 group whitespace-nowrap"
+                >
+                    <svg 
+                        className="w-4.5 h-4.5 text-white transform group-hover:translate-y-0.5 transition-transform duration-200" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor" 
+                        strokeWidth={2.5}
+                    >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                    </svg>
+                    Download CV
+                </a>
+            </div>
         </div>
     );
 }

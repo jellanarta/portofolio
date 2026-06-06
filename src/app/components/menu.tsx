@@ -65,10 +65,10 @@ export default function Menu() {
 
                         {/* Desktop Links */}
                         <nav className="hidden md:flex items-center gap-6">
-                            <ComponentsLink id="layanan" teks="Services" />
+                            <ComponentsLink id="services" teks="Services" />
                             <ComponentsLink id="profil" teks="Profile" />
                             <ComponentsLink id="skill" teks="Skills" />
-                            <ComponentsLink id="pengalaman" teks="Experience" />
+                            <ComponentsLink id="experience" teks="Experience" />
                             <ComponentsLink id="projects" teks="Projects" />
                             <ComponentsLink id="maps" teks="Location" />
                         </nav>
@@ -148,10 +148,10 @@ export default function Menu() {
 
                             {/* Mobile Links */}
                             <nav className="flex flex-col gap-4">
-                                <MobileComponentsLink id="layanan" teks="Services" setOpen={setOpenmenu} />
+                                <MobileComponentsLink id="services" teks="Services" setOpen={setOpenmenu} />
                                 <MobileComponentsLink id="profil" teks="Profile" setOpen={setOpenmenu} />
                                 <MobileComponentsLink id="skill" teks="Skills" setOpen={setOpenmenu} />
-                                <MobileComponentsLink id="pengalaman" teks="Experience" setOpen={setOpenmenu} />
+                                <MobileComponentsLink id="experience-mobile" teks="Experience" setOpen={setOpenmenu} />
                                 <MobileComponentsLink id="projects" teks="Projects" setOpen={setOpenmenu} />
                                 <MobileComponentsLink id="maps" teks="Location" setOpen={setOpenmenu} />
                             </nav>

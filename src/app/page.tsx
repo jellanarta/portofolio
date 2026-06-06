@@ -15,15 +15,15 @@ export default function Page() {
       <Layanan />
       <Projects />
       <div className="grid grid-cols-1 gap-8 md:grid-cols-[350px,1fr] px-6 max-w-5xl mx-auto mt-8 md:gap-8 pb-10">
-        <div className="space-y-8">
-          <div className="block md:hidden">
+        <div className="flex flex-col gap-8">
+          <div className="block md:hidden scroll-mt-28" id="experience-mobile">
             <Pengalamankerja />
           </div>
           <Detailprofil />
           <Skilldankeahlian />
         </div>
-        <div className="space-y-8">
-          <div className="hidden md:block">
+        <div className="flex flex-col gap-8">
+          <div className="hidden md:block scroll-mt-28" id="experience">
             <Pengalamankerja />
           </div>
           <Lokasimaps />

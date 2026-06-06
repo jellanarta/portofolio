@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Layanan() {
     return (
-        <section className="py-20 max-w-5xl mx-auto px-6 scroll-mt-28" id="layanan">
+        <section className="py-20 max-w-5xl mx-auto px-6 scroll-mt-28" id="services">
             {/* Section Header */}
             <div className="text-center mb-12 space-y-3">
                 <span className="text-xs uppercase font-extrabold tracking-widest text-indigo-500 dark:text-indigo-400 bg-indigo-500/10 dark:bg-indigo-500/20 px-3 py-1 rounded-full border border-indigo-500/20">

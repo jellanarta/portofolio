@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Pengalamankerja() {
   return (
-    <div className="glass-card rounded-2xl p-6 shadow-md shadow-slate-100/50 dark:shadow-none scroll-mt-28" id="pengalaman">
+    <div className="glass-card rounded-2xl p-6 shadow-md shadow-slate-100/50 dark:shadow-none">
       {/* Header */}
       <div className="mb-8 space-y-2">
         <span className="text-[10px] uppercase font-extrabold tracking-widest text-indigo-500 dark:text-indigo-400 bg-indigo-500/10 dark:bg-indigo-500/20 px-2 py-0.5 rounded-full border border-indigo-500/20">
@@ -16,7 +16,9 @@ export default function Pengalamankerja() {
       </div>
 
       {/* Timeline List */}
-      <div className="relative border-l border-indigo-100 dark:border-slate-800 ml-3 pl-6 space-y-10 py-2">
+      <div className="relative ml-3 pl-6 space-y-10">
+        {/* Timeline Line */}
+        <div className="absolute left-[9px] top-[15px] bottom-[15px] border-l border-indigo-100 dark:border-slate-800" />
         {pengalamankerja.map((data: WorkExperience, index: number) => (
           <Cardpengalaman data={data} key={index} />
         ))}
@@ -29,7 +31,7 @@ function Cardpengalaman({ data }: { data: WorkExperience }) {
   return (
     <div className="relative group">
       {/* Timeline Bullet Anchor */}
-      <span className="absolute -left-[31px] top-1.5 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-slate-50 dark:bg-slate-950">
+      <span className="absolute -left-[19px] top-1.5 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-slate-50 dark:bg-slate-950">
         <span className="h-2 w-2 rounded-full bg-indigo-500 group-hover:scale-130 transition-transform duration-300 ring-4 ring-indigo-500/15 group-hover:ring-indigo-500/35" />
       </span>
 
@@ -104,8 +106,8 @@ function Cardpengalaman({ data }: { data: WorkExperience }) {
               );
             }
             return (
-              <div key={idx} className="flex gap-2 items-start">
-                <span className="text-indigo-500 dark:text-indigo-400 mt-1 select-none font-extrabold">•</span>
+              <div key={idx} className="flex gap-2.5 items-start">
+                <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 dark:bg-indigo-400 mt-[6px] flex-shrink-0" />
                 <p className="flex-1 text-xs md:text-[13px]">{dt}</p>
               </div>
             );

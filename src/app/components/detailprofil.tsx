@@ -45,6 +45,7 @@ export default function Detailprofil() {
                         <Lebihlengkap ikon="nohp" teks="+6285941304719" />
                         <Lebihlengkap ikon="website" teks="arta.eu.org" />
                         <Lebihlengkap ikon="github" teks="jellanarta" />
+                        <Lebihlengkap ikon="instagram" teks="laelanasoraya" />
                         <Lebihlengkap ikon="lokasi" teks="Praya, Lombok Tengah, Nusa Tenggara Barat, Indonesia" />
                     </div>
                 </div>
@@ -59,6 +60,7 @@ function Lebihlengkap({ ikon, teks }: { ikon: string, teks: string }) {
     else if (ikon === "nohp") href = `https://wa.me/${teks.replace(/[^0-9]/g, '')}`;
     else if (ikon === "website") href = `https://${teks}`;
     else if (ikon === "github") href = `https://github.com/${teks}`;
+    else if (ikon === "instagram") href = `https://instagram.com/${teks}`;
 
     const isLink = href !== "";
 
