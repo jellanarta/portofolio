@@ -3,11 +3,20 @@ import Image from "next/image";
 
 export default function Pengalamankerja() {
   return (
-    <div className="pb-5 bg-white p-5 dark:bg-gray-700" id="pengalaman">
-      <div>
-        <div className="text-base font-semibold uppercase">WORK EXPERIENCE</div>
+    <div className="glass-card rounded-2xl p-6 shadow-md shadow-slate-100/50 dark:shadow-none scroll-mt-28" id="pengalaman">
+      {/* Header */}
+      <div className="mb-8 space-y-2">
+        <span className="text-[10px] uppercase font-extrabold tracking-widest text-indigo-500 dark:text-indigo-400 bg-indigo-500/10 dark:bg-indigo-500/20 px-2 py-0.5 rounded-full border border-indigo-500/20">
+          History
+        </span>
+        <h2 className="text-base font-extrabold text-slate-900 dark:text-white uppercase tracking-wider">
+          Work Experience
+        </h2>
+        <div className="h-1 w-8 bg-indigo-500 rounded-full" />
       </div>
-      <div className="mt-5 grid grid-cols-1 gap-5">
+
+      {/* Timeline List */}
+      <div className="relative border-l border-indigo-100 dark:border-slate-800 ml-3 pl-6 space-y-10 py-2">
         {pengalamankerja.map((data: WorkExperience, index: number) => (
           <Cardpengalaman data={data} key={index} />
         ))}
@@ -18,71 +27,89 @@ export default function Pengalamankerja() {
 
 function Cardpengalaman({ data }: { data: WorkExperience }) {
   return (
-    <div className="grid grid-cols-[auto,1fr] gap-4 items-start">
-      <div className="grid grid-cols-1 grid-rows-[auto,1fr] h-full gap-2 justify-center mt-[2px]">
-        <div className="ring-2 ring-blue-600 rounded-full w-3 h-3 flex justify-center items-center ">
-          <div className="bg-blue-600 w-1 h-1 rounded-full " />
-        </div>
-        <div className="h border-l border-blue-600 ml-[5px]" />
-      </div>
-      <div className=" pb-5">
-        <div className="text-sm border-t mt-1 pt-5 border-blue-500  uppercase font-semibold mb-2">
+    <div className="relative group">
+      {/* Timeline Bullet Anchor */}
+      <span className="absolute -left-[31px] top-1.5 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-slate-50 dark:bg-slate-950">
+        <span className="h-2 w-2 rounded-full bg-indigo-500 group-hover:scale-130 transition-transform duration-300 ring-4 ring-indigo-500/15 group-hover:ring-indigo-500/35" />
+      </span>
+
+      <div>
+        {/* Job Title */}
+        <h3 className="text-sm md:text-base font-extrabold text-slate-850 dark:text-white uppercase tracking-wide group-hover:text-indigo-500 dark:group-hover:text-indigo-400 transition-colors">
           {data.profession}
-        </div>
-        <div className="grid grid-cols-1 gap-1 border-b  border-blue-500 pb-3">
-          <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
-            <div className="w-3 h-3">
+        </h3>
+
+        {/* Company, Date, Location Badge Row */}
+        <div className="flex flex-wrap gap-x-4 gap-y-2 mt-2 pb-3.5 border-b border-slate-100 dark:border-slate-800/80">
+          {/* Company */}
+          <div className="flex items-center gap-1.5">
+            <div className="w-3.5 h-3.5 opacity-60">
               <Image
                 src={"/company.svg"}
-                width={100}
-                height={100}
-                alt="ikon company"
+                width={20}
+                height={20}
+                alt="Company Icon"
+                className="object-contain dark:invert"
               />
             </div>
-            <div className="text-xs uppercase text-gray-600 dark:text-gray-300">
+            <span className="text-[11px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">
               {data.company}
-            </div>
+            </span>
           </div>
-          <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
-            <div className="w-3 h-3">
+
+          {/* Date Range */}
+          <div className="flex items-center gap-1.5">
+            <div className="w-3.5 h-3.5 opacity-60">
               <Image
                 src={"/datetime.svg"}
-                width={100}
-                height={100}
-                alt="ikon datetime"
+                width={20}
+                height={20}
+                alt="Date Icon"
+                className="object-contain dark:invert"
               />
             </div>
-            <div className="text-xs uppercase text-gray-600 dark:text-gray-300">
-              <span>
-                {data.start_date} - {data.end_date}
-              </span>
-            </div>
+            <span className="text-[11px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">
+              {data.start_date} - {data.end_date}
+            </span>
           </div>
-          <div className="grid grid-cols-[auto,1fr] gap-2 items-center">
-            <div className="w-3 h-3">
+
+          {/* Location */}
+          <div className="flex items-center gap-1.5">
+            <div className="w-3.5 h-3.5 opacity-60">
               <Image
                 src={"/worklocation.svg"}
-                width={100}
-                height={100}
-                alt="ikon worklocation"
+                width={20}
+                height={20}
+                alt="Location Icon"
+                className="object-contain dark:invert"
               />
             </div>
-            <div className="text-xs uppercase text-gray-600 dark:text-gray-300">
+            <span className="text-[11px] uppercase font-bold text-slate-500 dark:text-slate-400 tracking-wider">
               {data.work_location}
-            </div>
+            </span>
           </div>
         </div>
 
-        <div className="text-sm mt-3  dark:text-gray-300 grid grid-cols-1 gap-y-4">
-          {data.experience.map((dt: string, idx: number) => (
-            <ul className="list-disc ml-4" key={idx}>
-              <li className="text-[15px]">{dt}</li>
-            </ul>
-          ))}
-        </div>
-
-        <div className="mt-5 text-sm">
-          <span className="font-semibold uppercase">SKILS</span> : {data.skils.join(" - ")}
+        {/* Bullet List Details */}
+        <div className="mt-4 text-[12px] md:text-sm text-slate-550 dark:text-slate-350 leading-relaxed font-normal space-y-2">
+          {data.experience.map((dt: string, idx: number) => {
+            const isHeader = ["NEXT.JS", "EXPRESS.JS", "ASP.NET"].includes(dt.toUpperCase());
+            if (isHeader) {
+              return (
+                <div key={idx} className="pt-4 pb-1 first:pt-0">
+                  <span className="text-[10px] uppercase font-extrabold tracking-widest text-indigo-500 dark:text-indigo-400 bg-indigo-500/10 dark:bg-indigo-500/20 px-2 py-0.5 rounded-full border border-indigo-500/20">
+                    {dt}
+                  </span>
+                </div>
+              );
+            }
+            return (
+              <div key={idx} className="flex gap-2 items-start">
+                <span className="text-indigo-500 dark:text-indigo-400 mt-1 select-none font-extrabold">•</span>
+                <p className="flex-1 text-xs md:text-[13px]">{dt}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>
