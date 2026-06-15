@@ -1,1 +1,39 @@
-[]
+[
+  {
+    "order_id": "payment_notif_test_M948181073_9284997b-83c1-4046-a535-cfc24ae40538",
+    "buyer_details": {
+      "name": "Unknown (Webhook Fallback)",
+      "email": "",
+      "wa": "",
+      "notes": ""
+    },
+    "item_details": {
+      "id": "unknown",
+      "name": "Unknown Service",
+      "price": "105000.00"
+    },
+    "transaction_details": {
+      "token": "",
+      "redirect_url": "",
+      "status": "settlement",
+      "payment_type": "gopay",
+      "created_at": "2026-06-15T16:19:37.443Z",
+      "updated_at": "2026-06-15T16:19:37.443Z"
+    },
+    "webhook_payload": {
+      "transaction_time": "2023-11-15 18:45:13",
+      "transaction_status": "settlement",
+      "transaction_id": "513f1f01-c9da-474c-9fc9-d5c64364b709",
+      "status_message": "midtrans payment notification",
+      "status_code": "200",
+      "signature_key": "83673ec8b66748e51be047c8f8fd6d3020aafd9a1ef7723d53d186f6486b11d27208edf28387a6c44a88a7519705ce9d76d600ba61331031259284e8fae5da28",
+      "settlement_time": "2023-11-15 22:45:13",
+      "payment_type": "gopay",
+      "order_id": "payment_notif_test_M948181073_9284997b-83c1-4046-a535-cfc24ae40538",
+      "merchant_id": "M948181073",
+      "gross_amount": "105000.00",
+      "fraud_status": "accept",
+      "currency": "IDR"
+    }
+  }
+]

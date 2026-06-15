@@ -5,7 +5,20 @@ import crypto from 'crypto';
 
 export async function POST(req: Request) {
   try {
-    const payload = await req.json();
+    let payload: any;
+    try {
+      payload = await req.json();
+    } catch (err) {
+      console.warn('[Webhook] Received empty or invalid JSON body. Responding with 200 OK for connection test.');
+      return NextResponse.json({ success: true, message: 'Connection test OK' });
+    }
+
+    // Handle Midtrans notification URL verification test
+    if (payload.status_message && typeof payload.status_message === 'string' && payload.status_message.toLowerCase().includes('notification test')) {
+      console.log('[Webhook] Received dummy Midtrans notification test');
+      return NextResponse.json({ success: true, message: 'Notification test OK' });
+    }
+
     const {
       order_id,
       transaction_status,
@@ -15,6 +28,12 @@ export async function POST(req: Request) {
       payment_type,
       fraud_status,
     } = payload;
+
+    // Check for required fields for actual transaction notification
+    if (!order_id || !signature_key) {
+      console.warn('[Webhook] Missing order_id or signature_key in webhook payload');
+      return NextResponse.json({ error: 'Payload tidak lengkap' }, { status: 400 });
+    }
 
     const serverKey = process.env.MIDTRANS_SERVER_KEY || '';
 
