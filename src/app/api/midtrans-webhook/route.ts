@@ -1,7 +1,6 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
 import crypto from 'crypto';
+import { supabase } from '../../lib/supabase';
 
 export async function POST(req: Request) {
   try {
@@ -67,65 +66,56 @@ export async function POST(req: Request) {
       status = transaction_status;
     }
 
-    // Load and update orders.json
-    const ordersFilePath = path.join(process.cwd(), 'orders.json');
-    let ordersList: any[] = [];
+    // Check if order exists in Supabase
+    const { data: existingOrder, error: fetchError } = await supabase
+      .from('website_orders')
+      .select('order_id')
+      .eq('order_id', order_id)
+      .maybeSingle();
 
-    if (fs.existsSync(ordersFilePath)) {
-      try {
-        const fileContent = fs.readFileSync(ordersFilePath, 'utf-8');
-        ordersList = JSON.parse(fileContent);
-      } catch (err) {
-        ordersList = [];
-      }
-    }
-
-    const orderIndex = ordersList.findIndex((order) => order.order_id === order_id);
-
-    if (orderIndex !== -1) {
-      // Merge new data and update status
-      ordersList[orderIndex] = {
-        ...ordersList[orderIndex],
-        transaction_details: {
-          ...ordersList[orderIndex].transaction_details,
+    if (existingOrder) {
+      // Update existing order status, payment type, and save the webhook payload
+      const { error: updateError } = await supabase
+        .from('website_orders')
+        .update({
           status: status,
           payment_type: payment_type,
-          updated_at: new Date().toISOString(),
-        },
-        webhook_payload: payload,
-      };
+          webhook_payload: payload,
+          updated_at: new Date().toISOString()
+        })
+        .eq('order_id', order_id);
 
-      fs.writeFileSync(ordersFilePath, JSON.stringify(ordersList, null, 2), 'utf-8');
+      if (updateError) {
+        console.error(`[Webhook] Error updating order status for ${order_id}:`, updateError);
+        return NextResponse.json({ error: 'Gagal mengupdate status pesanan di database' }, { status: 500 });
+      }
+      
       console.log(`[Webhook] Success updating status for order: ${order_id} to ${status}`);
     } else {
-      console.warn(`[Webhook] Order ID ${order_id} not found in orders.json`);
-      // If the webhook comes for an order not created in checkout (unlikely in sandbox if we test properly, but possible if database is cleared)
-      // Save it anyway as a new record to avoid losing data
-      const fallbackOrder = {
-        order_id: order_id,
-        buyer_details: {
-          name: 'Unknown (Webhook Fallback)',
-          email: '',
-          wa: '',
-          notes: '',
-        },
-        item_details: {
-          id: 'unknown',
-          name: 'Unknown Service',
-          price: gross_amount,
-        },
-        transaction_details: {
-          token: '',
-          redirect_url: '',
+      console.warn(`[Webhook] Order ID ${order_id} not found in database. Creating fallback record.`);
+      // Insert a fallback order record
+      const { error: insertError } = await supabase
+        .from('website_orders')
+        .insert({
+          order_id: order_id,
+          buyer_name: 'Unknown (Webhook Fallback)',
+          buyer_email: '',
+          buyer_wa: '',
+          buyer_notes: '',
+          service_id: 'unknown',
+          service_name: 'Unknown Service',
+          price: parseFloat(gross_amount || '0'),
           status: status,
           payment_type: payment_type,
+          webhook_payload: payload,
           created_at: new Date().toISOString(),
-          updated_at: new Date().toISOString(),
-        },
-        webhook_payload: payload,
-      };
-      ordersList.push(fallbackOrder);
-      fs.writeFileSync(ordersFilePath, JSON.stringify(ordersList, null, 2), 'utf-8');
+          updated_at: new Date().toISOString()
+        });
+
+      if (insertError) {
+        console.error(`[Webhook] Error inserting fallback order ${order_id}:`, insertError);
+        return NextResponse.json({ error: 'Gagal membuat record pesanan baru' }, { status: 500 });
+      }
     }
 
     return NextResponse.json({ success: true, message: 'Webhook processed successfully' });

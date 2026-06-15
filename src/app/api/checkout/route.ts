@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
+import { supabase } from '../../lib/supabase';
 
 export async function POST(req: Request) {
   try {
@@ -66,43 +65,32 @@ export async function POST(req: Request) {
       );
     }
 
-    // Save order data to orders.json in the project root
-    const ordersFilePath = path.join(process.cwd(), 'orders.json');
-    let ordersList = [];
-
-    if (fs.existsSync(ordersFilePath)) {
-      try {
-        const fileContent = fs.readFileSync(ordersFilePath, 'utf-8');
-        ordersList = JSON.parse(fileContent);
-      } catch (err) {
-        ordersList = [];
-      }
-    }
-
-    const newOrder = {
-      order_id: orderId,
-      buyer_details: {
-        name,
-        email: email || '',
-        wa: wa || '',
-        notes: notes || '',
-      },
-      item_details: {
-        id: serviceId,
-        name: serviceName,
+    // Save order data to Supabase website_orders table
+    const { error: dbError } = await supabase
+      .from('website_orders')
+      .insert({
+        order_id: orderId,
+        buyer_name: name,
+        buyer_email: email || '',
+        buyer_wa: wa || '',
+        buyer_notes: notes || '',
+        service_id: serviceId,
+        service_name: serviceName,
         price: price,
-      },
-      transaction_details: {
-        token: midtransData.token,
-        redirect_url: midtransData.redirect_url,
+        snap_token: midtransData.token,
+        snap_redirect_url: midtransData.redirect_url,
         status: 'pending',
         created_at: new Date().toISOString(),
-      },
-      webhook_payload: null,
-    };
+        updated_at: new Date().toISOString()
+      });
 
-    ordersList.push(newOrder);
-    fs.writeFileSync(ordersFilePath, JSON.stringify(ordersList, null, 2), 'utf-8');
+    if (dbError) {
+      console.error('[Checkout DB Error] Failed to save order to Supabase:', dbError);
+      return NextResponse.json(
+        { error: `Database Error: ${dbError.message}. Pastikan tabel 'website_orders' sudah dibuat di Supabase.` },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({
       success: true,
