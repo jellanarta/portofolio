@@ -41,7 +41,7 @@ export default function Menu() {
                 <div className="max-w-5xl mx-auto backdrop-blur-md bg-white/70 dark:bg-slate-900/75 border-b border-slate-200/80 dark:border-slate-800/80 md:border md:rounded-full shadow-lg md:shadow-indigo-500/5 transition-all duration-300">
                     <div className="h-16 md:h-20 flex justify-between items-center px-6">
                         {/* Logo / Title */}
-                        <a href="#" className="flex items-center gap-3 group">
+                        <a href="/" className="flex items-center gap-3 group">
                             <div className="w-9 h-9 relative rounded-xl overflow-hidden bg-gradient-to-tr from-indigo-500 to-purple-500 p-0.5 shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform duration-300">
                                 <div className="w-full h-full bg-white dark:bg-slate-950 flex items-center justify-center rounded-[10px]">
                                     <Image
@@ -71,6 +71,12 @@ export default function Menu() {
                             <ComponentsLink id="experience" teks="Experience" />
                             <ComponentsLink id="projects" teks="Projects" />
                             <ComponentsLink id="maps" teks="Location" />
+                            <a 
+                                href="/jasa-web" 
+                                className="uppercase text-xs tracking-wider font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 transition-colors duration-200"
+                            >
+                                Jasa Website
+                            </a>
                         </nav>
 
                         {/* Right Buttons: Theme Toggle & Mobile Menu */}
@@ -121,7 +127,7 @@ export default function Menu() {
                         <div>
                             {/* Drawer Header */}
                             <div className="flex justify-between items-center mb-8">
-                                <div className="flex items-center gap-2">
+                                <a href="/" className="flex items-center gap-2">
                                     <div className="w-8 h-8 relative rounded-lg overflow-hidden bg-gradient-to-tr from-indigo-500 to-purple-500 p-0.5">
                                         <div className="w-full h-full bg-white dark:bg-slate-950 flex items-center justify-center rounded-[6px]">
                                             <Image
@@ -135,7 +141,7 @@ export default function Menu() {
                                     <span className="font-extrabold text-sm uppercase bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-500">
                                         Jellan Arta
                                     </span>
-                                </div>
+                                </a>
                                 <button
                                     onClick={() => setOpenmenu(false)}
                                     className="w-8 h-8 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
@@ -154,6 +160,13 @@ export default function Menu() {
                                 <MobileComponentsLink id="experience-mobile" teks="Experience" setOpen={setOpenmenu} />
                                 <MobileComponentsLink id="projects" teks="Projects" setOpen={setOpenmenu} />
                                 <MobileComponentsLink id="maps" teks="Location" setOpen={setOpenmenu} />
+                                <a 
+                                    href="/jasa-web" 
+                                    onClick={() => setOpenmenu(false)}
+                                    className="block py-2.5 px-4 rounded-xl text-sm font-bold bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-indigo-900/40 transition-all duration-200"
+                                >
+                                    Jasa Website
+                                </a>
                             </nav>
                         </div>
                         
@@ -170,7 +183,7 @@ export default function Menu() {
 function ComponentsLink({ teks, id }: { teks: string, id: string }) {
     return (
         <a 
-            href={`#${id}`} 
+            href={`/#${id}`} 
             className="uppercase text-xs tracking-wider font-semibold text-slate-600 dark:text-slate-300 hover:text-indigo-500 dark:hover:text-indigo-400 transition-colors duration-200 nav-link-underline"
         >
             {teks}
@@ -181,7 +194,7 @@ function ComponentsLink({ teks, id }: { teks: string, id: string }) {
 function MobileComponentsLink({ teks, id, setOpen }: { teks: string, id: string, setOpen: (open: boolean) => void }) {
     return (
         <a 
-            href={`#${id}`} 
+            href={`/#${id}`} 
             onClick={() => setOpen(false)}
             className="block py-2.5 px-4 rounded-xl text-sm font-semibold text-slate-700 dark:text-slate-350 hover:bg-slate-50 dark:hover:bg-slate-800/50 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all duration-200"
         >
