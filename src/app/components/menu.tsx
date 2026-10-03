@@ -69,8 +69,7 @@ export default function Menu() {
                             <ComponentsLink id="profil" teks="Profile" />
                             <ComponentsLink id="skill" teks="Skills" />
                             <ComponentsLink id="experience" teks="Experience" />
-                            <ComponentsLink id="projects" teks="Projects" />
-                            <ComponentsLink id="maps" teks="Location" />
+                            {/* <ComponentsLink id="maps" teks="Location" /> */}
                             <a 
                                 href="/jasa-web" 
                                 className="uppercase text-xs tracking-wider font-bold text-indigo-600 dark:text-indigo-400 hover:text-indigo-500 transition-colors duration-200"
@@ -158,8 +157,7 @@ export default function Menu() {
                                 <MobileComponentsLink id="profil" teks="Profile" setOpen={setOpenmenu} />
                                 <MobileComponentsLink id="skill" teks="Skills" setOpen={setOpenmenu} />
                                 <MobileComponentsLink id="experience-mobile" teks="Experience" setOpen={setOpenmenu} />
-                                <MobileComponentsLink id="projects" teks="Projects" setOpen={setOpenmenu} />
-                                <MobileComponentsLink id="maps" teks="Location" setOpen={setOpenmenu} />
+                                {/* <MobileComponentsLink id="maps" teks="Location" setOpen={setOpenmenu} /> */}
                                 <a 
                                     href="/jasa-web" 
                                     onClick={() => setOpenmenu(false)}

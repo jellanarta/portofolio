@@ -41,12 +41,12 @@ export default function Detailprofil() {
                     {/* Contact Details List */}
                     <div className="grid grid-cols-1 gap-4 pt-2">
                         <Lebihlengkap ikon="pendidikan" teks="SMK Negeri 1 Praya (Pariwisata)" />
-                        <Lebihlengkap ikon="email" teks="jellanarta@gmail.com" />
-                        <Lebihlengkap ikon="nohp" teks="+6285941304719" />
+                        {/* <Lebihlengkap ikon="email" teks="jellanarta@gmail.com" /> */}
+                        {/* <Lebihlengkap ikon="nohp" teks="+6285941304719" /> */}
                         <Lebihlengkap ikon="website" teks="arta.eu.org" />
-                        <Lebihlengkap ikon="github" teks="jellanarta" />
-                        <Lebihlengkap ikon="instagram" teks="laelanasoraya" />
-                        <Lebihlengkap ikon="lokasi" teks="Praya, Lombok Tengah, Nusa Tenggara Barat, Indonesia" />
+                        {/* <Lebihlengkap ikon="github" teks="jellanarta" /> */}
+                        {/* <Lebihlengkap ikon="instagram" teks="laelanasoraya" /> */}
+                        {/* <Lebihlengkap ikon="lokasi" teks="Praya, Lombok Tengah, Nusa Tenggara Barat, Indonesia" /> */}
                     </div>
                 </div>
             </div>

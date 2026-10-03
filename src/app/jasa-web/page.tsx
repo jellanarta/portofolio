@@ -260,6 +260,7 @@ export default function JasaWebPage() {
         </div>
 
         {/* Business Contact Info */}
+        {/* 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="p-5 bg-white dark:bg-slate-900 border border-slate-200/60 dark:border-slate-800/60 rounded-2xl flex items-start gap-4">
             <div className="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/50 flex items-center justify-center text-indigo-500 dark:text-indigo-400 shrink-0">
@@ -304,6 +305,7 @@ export default function JasaWebPage() {
             </div>
           </div>
         </div>
+        */}
       </div>
 
       {/* Checkout Modal */}

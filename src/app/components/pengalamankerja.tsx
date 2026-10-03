@@ -44,6 +44,7 @@ function Cardpengalaman({ data }: { data: WorkExperience }) {
         {/* Company, Date, Location Badge Row */}
         <div className="flex flex-wrap gap-x-4 gap-y-2 mt-2 pb-3.5 border-b border-slate-100 dark:border-slate-800/80">
           {/* Company */}
+          {/* 
           <div className="flex items-center gap-1.5">
             <div className="w-3.5 h-3.5 opacity-60">
               <Image
@@ -58,6 +59,7 @@ function Cardpengalaman({ data }: { data: WorkExperience }) {
               {data.company}
             </span>
           </div>
+          */}
 
           {/* Date Range */}
           <div className="flex items-center gap-1.5">
@@ -76,6 +78,7 @@ function Cardpengalaman({ data }: { data: WorkExperience }) {
           </div>
 
           {/* Location */}
+          {/* 
           <div className="flex items-center gap-1.5">
             <div className="w-3.5 h-3.5 opacity-60">
               <Image
@@ -90,6 +93,7 @@ function Cardpengalaman({ data }: { data: WorkExperience }) {
               {data.work_location}
             </span>
           </div>
+          */}
         </div>
 
         {/* Bullet List Details */}

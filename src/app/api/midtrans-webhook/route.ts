@@ -34,7 +34,7 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Payload tidak lengkap' }, { status: 400 });
     }
 
-    const serverKey = process.env.MIDTRANS_SERVER_KEY || '';
+    const serverKey = (process.env.MIDTRANS_SERVER_KEY || '').trim();
 
     // Verify signature key: SHA512(order_id + status_code + gross_amount + ServerKey)
     const signatureSource = `${order_id}${status_code}${gross_amount}${serverKey}`;

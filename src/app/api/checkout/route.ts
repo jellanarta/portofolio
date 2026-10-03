@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     const orderId = `ORDER-${timestamp}-${rand}`;
 
     // Midtrans API Credentials
-    const serverKey = process.env.MIDTRANS_SERVER_KEY || '';
+    const serverKey = (process.env.MIDTRANS_SERVER_KEY || '').trim();
     const authHeader = `Basic ${Buffer.from(serverKey + ':').toString('base64')}`;
 
     // Prepare payload for Midtrans Sandbox Snap API

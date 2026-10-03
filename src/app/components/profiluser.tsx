@@ -41,6 +41,7 @@ export default function Profiluser() {
             </div>
 
             {/* Social Links */}
+            {/* 
             <div className="flex justify-center gap-4 mt-2">
                 <Membuatsosmed ikon="github" username="jellanarta" tooltip="GitHub" />
                 <Membuatsosmed ikon="linkedin" username="in/jellanarta" tooltip="LinkedIn" />
@@ -48,8 +49,10 @@ export default function Profiluser() {
                 <Membuatsosmed ikon="facebook" username="jellanarta.id" tooltip="Facebook" />
                 <Membuatsosmed ikon="tiktok" username="@jellanarta" tooltip="TikTok" />
             </div>
+            */}
 
             {/* Download CV Button */}
+            {/* 
             <div className="mt-4">
                 <a
                     href="https://drive.google.com/file/d/1tlGe1cp9JBUNh2BLhefm_qb4s06PSUPq/view?usp=drive_link"
@@ -69,6 +72,7 @@ export default function Profiluser() {
                     Download CV
                 </a>
             </div>
+            */}
         </div>
     );
 }
